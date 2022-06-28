@@ -1,0 +1,13 @@
+${AnsiStyle.BOLD}${AnsiColor.BRIGHT_RED}
+            ss
+           .NMy`
+         .` yMMd.
+        .Ny` sMMm-                                              _
+        :MMh` +MMN:             /\                             | |
+    ./o:`yMMm. /NMmo:.         /  \   _ __ ___  ___ _ __   __ _| |
+ -smMMMm` oMMN: oMMMMMmo.     / /\ \ | '__/ __|/ _ \ '_ \ / _` | |
+sMMMMMMMd. /NMN+oMMMMMMMN+   / ____ \| |  \__ \  __/ | | | (_| | |
+MMMMMMMMMm- :NMMNMMMMMMMMm  /_/    \_\_|  |___/\___|_| |_|\__,_|_| ${AnsiStyle.ITALIC}v@project.parent.version@
+yMMMMMMMMMN/ yMMMMMMMMMMMo ${AnsiStyle.NORMAL}${AnsiStyle.FAINT}${AnsiColor.DEFAULT}:: ${AnsiStyle.NORMAL}${AnsiColor.RED}Notebook ${AnsiColor.YELLOW}B${AnsiColor.GREEN}R ${AnsiStyle.NORMAL}${AnsiStyle.FAINT}${AnsiColor.DEFAULT}:: ${AnsiStyle.NORMAL}${AnsiColor.RED}Batch Process Java ${AnsiStyle.FAINT}${AnsiColor.DEFAULT}::${AnsiStyle.NORMAL}${AnsiStyle.BOLD}${AnsiColor.DEFAULT}${AnsiColor.BRIGHT_RED}
+ :yNMMMMMMMModMMMMMMMMms.  ${AnsiStyle.NORMAL}${AnsiColor.DEFAULT}${AnsiStyle.ITALIC}@project.artifactId@ v@project.version@${AnsiStyle.NORMAL}${AnsiStyle.BOLD}${AnsiColor.DEFAULT}${AnsiColor.BRIGHT_RED}
+   `-+sdmNNNMMNNNdhs+-     ${AnsiStyle.FAINT}${AnsiColor.DEFAULT}${AnsiStyle.ITALIC}Spring Boot ${spring-boot.version} (Java @java.version@)${AnsiStyle.NORMAL}${AnsiColor.DEFAULT}

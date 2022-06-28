@@ -1,0 +1,11 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: my-job
+spec:
+  template:
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: my-job
+          image: artifactory.notebookbr.corp/docker-hub/<docker-hub-user>/${artifactId}

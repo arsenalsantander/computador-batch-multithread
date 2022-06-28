@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>br.com.notebook.ars</groupId>
+		<artifactId>computador-batch-lib-parent</artifactId>
+		<version>1.3.0</version>
+	</parent>
+
+	<groupId>org.example</groupId>
+	<artifactId>demo-computador-batch-multithread</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>AppComputador Computador Batch</name>
+	<description>Computador Batch - Generated to AppComputador</description>
+
+	<!-- Nao Remover -->
+	<organization>
+		<name>Notebook Tecnologia</name>
+		<url>https://www.notebook.com.br</url>
+	</organization>
+	<licenses>
+		<license>
+			<name>Notebook Tecnologia, Version 1.0</name>
+			<url>https://www.notebook.com.br/licenses/LICENSE-1.0.txt</url>
+			<distribution>repo</distribution>
+			<comments>####415253454E414C####</comments>
+		</license>
+	</licenses>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.target>11</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
+		<archetype.key>####415253454E414C####</archetype.key>
+	</properties>
+
+	<dependencies>
+
+		<!-- Computador Core Library -->
+		<dependency>
+			<groupId>br.com.notebook.ars</groupId>
+			<artifactId>computador-batch-lib-core</artifactId>
+		</dependency>
+
+		<!-- Batch -->
+		<dependency>
+			<groupId>br.com.notebook.ars</groupId>
+			<artifactId>computador-batch</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>br.com.notebook.ars</groupId>
+			<artifactId>computador-batch-utils</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${h2-database.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.batch</groupId>
+			<artifactId>spring-batch-test</artifactId>
+			<version>4.3.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>5.3.1</version>
+		</dependency>
+
+		<!-- For BA Credentials, uncomment dependency bellow -->
+		<!--<dependency>
+			<groupId>br.com.notebook.ba</groupId>
+			<artifactId>BACredentialsClient</artifactId>
+			<version>1.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.altec.bsbr.app.dl</groupId>
+			<artifactId>KeystoreUtils</artifactId>
+			<version>1.7</version>
+		</dependency>-->
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+							<goal>build-info</goal>
+						</goals>
+						<configuration>
+							<executable>true</executable>
+							<additionalProperties>
+								<project.description>${project.description}</project.description>
+							</additionalProperties>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>pl.project13.maven</groupId>
+				<artifactId>git-commit-id-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>get-the-git-infos</id>
+						<goals>
+							<goal>revision</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<generateGitPropertiesFile>true</generateGitPropertiesFile>
+					<failOnNoGitDirectory>false</failOnNoGitDirectory>
+					<includeOnlyProperties>
+						<includeOnlyProperty>git.commit.id</includeOnlyProperty>
+						<includeOnlyProperty>git.branch</includeOnlyProperty>
+						<includeOnlyProperty>git.commit.time</includeOnlyProperty>
+					</includeOnlyProperties>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<delimiters>
+						<delimiter>@</delimiter>
+					</delimiters>
+					<useDefaultDelimiters>false</useDefaultDelimiters>
+				</configuration>
+			</plugin>
+		</plugins>
+		<finalName>demo-computador-batch-multithread</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+	</build>
+</project>

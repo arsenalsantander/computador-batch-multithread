@@ -1,0 +1,70 @@
+{
+    "groups": [
+      {
+        "name": "computador.library.batch.config.database",
+        "type": "org.example.config.DatabaseConfig",
+        "description": "Computador Database configuration properties."
+      }
+    ],
+    "properties": [
+      {
+        "name": "computador.library.batch.config.database.username",
+        "type": "java.lang.String",
+        "sourceType": "org.example.config.DatabaseConfig",
+        "description": "Username database connection."
+      },
+      {
+        "name": "computador.library.batch.config.database.password",
+        "type": "java.lang.String",
+        "sourceType": "org.example.config.DatabaseConfig",
+        "description": "Password database connection."
+      },
+      {
+        "name": "computador.library.batch.config.database.driver-class-name",
+        "type": "java.lang.String",
+        "sourceType": "org.example.config.DatabaseConfig",
+        "description": "Class JDBC connection."
+      },
+      {
+        "name": "computador.library.batch.config.database.url",
+        "type": "java.lang.String",
+        "sourceType": "org.example.config.DatabaseConfig",
+        "description": "URL string JDBC connection."
+      },
+      {
+        "name": "computador.library.batch.config.database.pool-name",
+        "type": "java.lang.String",
+        "sourceType": "org.example.config.DatabaseConfig",
+        "description": "Hikary pool name.",
+        "defaultValue": "ComputadorPool"
+      },
+      {
+        "name": "computador.library.batch.config.database.min-pool-size",
+        "type": "java.lang.Integer",
+        "sourceType": "org.example.config.DatabaseConfig",
+        "description": "Hikary min pool size (Initial).",
+        "defaultValue": 1
+      },
+      {
+        "name": "computador.library.batch.config.database.max-pool-size",
+        "type": "java.lang.Integer",
+        "sourceType": "org.example.config.DatabaseConfig",
+        "description": "Hikary max pool size.",
+        "defaultValue": 2
+      },
+      {
+        "name": "computador.library.batch.config.database.validation-timeout",
+        "type": "java.lang.Integer",
+        "sourceType": "org.example.config.DatabaseConfig",
+        "description": "Hikary Validation time-out(ms).",
+        "defaultValue": 250
+      },
+      {
+        "name": "computador.library.batch.config.database.max-life-time",
+        "type": "java.lang.Integer",
+        "sourceType": "org.example.config.DatabaseConfig",
+        "description": "Hikary max life Time(ms).",
+        "defaultValue": 1800000
+      }     
+    ]
+  }
